@@ -1,0 +1,22 @@
+flowchart LR
+    A[App Somos Trenes\nMobile / Web] --> B[Widget Chatbot]
+    B --> C[API Chatbot FastAPI]
+
+    C --> D[Auth Service\nJWT Mock]
+    D --> C
+
+    C --> E[Chatbot Service]
+    E --> F[Intent & Routing]
+    F --> G[RAG / Knowledge Base]
+
+    G --> H[Datos RRHH Ficticios\nExport SAP QAS Sanitizado]
+
+    E --> I[Gestión de Solicitudes]
+    I --> J[DB Demo\nSolicitudes Licencias]
+
+    C --> K[Logs & Métricas]
+
+    style A fill:#EAF6FB
+    style B fill:#D6EDF8
+    style C fill:#FFFFFF
+    style H fill:#FFF4CC
